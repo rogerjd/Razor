@@ -19,15 +19,11 @@ namespace Razor.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            Product myProduct = new Product
-            {
-                ProductID = 1,
-                Name = "Kayak",
-                Description = "A boat for one person",
-                Category = "Watersports",
-                Price = 275M
+            Product[] myProducts = {
+                new Product{ProductID = 1,Name = "Kayak",Description = "A boat for one person",Category = "Watersports",Price = 275M},
+                new Product {ProductID=2,Name="Catchers Mitt", Description="Strike 3", Category="Baseball", Price=29.95M }
             };
-            List<Product> l = new List<Product> { myProduct };
+            List<Product> l = new List<Product>(myProducts);
             return View(l);
         }
 
