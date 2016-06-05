@@ -1,7 +1,9 @@
 @model IEnumerable<Razor.Models.Product>
 
-@{
+@{ 
     ViewData["Title"] = "Index";
+
+    @:output some text in a code block without html
 }
 
 @{ var prod = Model.First(); }
